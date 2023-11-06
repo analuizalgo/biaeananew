@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-sca=1.0>"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/contas (1).jpg">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Contas do mês</title>
@@ -14,15 +14,15 @@
     <h1>Programa Contas do Mês</h1>
         <form>
             <p>Descrição da conta:
-            <input type="number" id="inNumero" required>
+            <input type="text" id="inDescrição" required>
             </p>
             <p>Valor a pagar R$:
-            <input type="number" id="inNumero" required>
+            <input type="number" min="0" step="0.01" id="inValor" required>
             </p>
-            <input type="submit" value="">
+            <input type="submit" value="resgistrar conta">
         </form>
-    <pre> id="outResp1"></pre>
-    <pre> id="outResp2"></pre>
+    <pre id="outResp1"></pre>
+    <pre id="outResp2"></pre>
     <script src="contas.js"></script>
 
 </body>

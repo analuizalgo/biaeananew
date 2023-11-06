@@ -10,17 +10,17 @@ frm.addEventListener ("submit", (e) => {
     e.preventDefault()
 
     const descricao = frm.inDescrição.value
-    const valor = Number()
-})
-form.addEventListener("submit", (e) =>{
-    e.preventDefault()
+    const valor = Number(frm.inValor.value)
 
-    const numero = Number(from.inNumero.value)
-    let resposta = ""     //variavel do tipo string, para concatenar a resposta
-//cria um laço de repetição
-    for(let i = 1; i <= 10; i++){
-        resposta = resposta + numero + " x " + i + " = " + (numero * i) + "\n"
-    }
-    resp.innerText = resposta
-    
+    numContas++
+    valTotal = valTotal + valor
+
+    resposta = resposta + descrição + " - R$: " + valor.toFixed(2) + "\n"
+
+    resp1.innerText = `${resposta}--------------------------------`
+    resp2.innerText = `${numContas} conta(s) - Total R$: ${valTotal.toFixed(2)}`
+
+    frm.inDescrição.value = ""
+    frm.inValor.value = ""
+    frm.inDescrição.focus()
 })
