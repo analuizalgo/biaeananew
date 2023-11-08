@@ -15,5 +15,8 @@ form.addEventListener("submit", (e) => {
     } else if(media >=4) {
         resp2.innerText = `Atenção ${nome}! Você está de exame`
         resp2.style.color = "green"
+    } else if(media >=2) {
+        resp2.innerText = `Ops ${nome}! Você foi reprovado(a)`
+        resp2.style.color = "red"
     }
     })
